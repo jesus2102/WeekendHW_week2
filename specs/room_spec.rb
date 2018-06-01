@@ -12,8 +12,8 @@ class RoomTest < MiniTest::Test
     @song1 = Song.new("Vive la vida loca", "Ricky Martin")
     @song2 = Song.new("Bycicle", "Queens")
 
-    @guest1 = Guest.new("Tony", 5)
-    @guest2 = Guest.new("Zsolt", 50)
+    @guest1 = Guest.new("Tony", 5, @song1)
+    @guest2 = Guest.new("Zsolt", 50, @song2)
   end
 
   def test_guest_count
