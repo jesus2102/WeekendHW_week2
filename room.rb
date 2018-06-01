@@ -3,7 +3,7 @@ class Room
   def initialize(number)
 
     @room_number = number
-    @playlist = {}
+    @playlist = []
     @number_guests = []
 
   end
@@ -18,6 +18,14 @@ class Room
 
   def check_out(guest)
     @number_guests.delete(guest)
+  end
+
+  def playlist_count
+    return @playlist.length()
+  end
+
+  def add_song(song)
+    @playlist.push(song)
   end
 
 end
